@@ -341,30 +341,3 @@ i.icon.asterisk.loading {
   width: 100%;
   justify-content: center;
 }
-
-/* Заголовки в модальных окнах */
-.ui.modal .header .icon {
-  margin: 0 0 0 1rem !important;
-  color: rgba(255, 255, 255, 0.8);
-  transition: all 0.2s ease;
-}
-
-.ui.modal .header .icon:hover {
-  color: white;
-  transform: rotate(90deg);
-}
-
-/* Кастомный скроллбар для модальных окон */
-.ui.modal ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-.ui.modal ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 3px;
-}
-
-.ui.modal ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
-}
