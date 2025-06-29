@@ -109,8 +109,6 @@ h2 {
 
 .ui.button:hover {
   background: #5a2a7d !important;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Дополнительные стили для кнопок в поисковой строке */
