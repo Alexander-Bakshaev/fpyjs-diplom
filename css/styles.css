@@ -113,60 +113,62 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
-/*.ui.button:active {*/
-/*  transform: translateY(0) !important;*/
-/*  box-shadow: none !important;*/
-/*}*/
-
-/* Выравнивание иконок в кнопках */
-/*.ui.button > .icon {*/
-/*  margin: 0 8px 0 0 !important;*/
-/*}*/
-
-/*.ui.icon.button > .icon {*/
-/*  margin: 0 !important;*/
-/*}*/
-
 /* Дополнительные стили для кнопок в поисковой строке */
 .search-block .ui.button {
   margin-left: 1px;
+  border-radius: 0 !important;
 }
 
 .ui.grid > .row.images-wrapper {
   justify-content: space-between;
 }
 
+/* Галерея фотографий */
 .images-list .grid {
-  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  padding: 8px 0;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .images-list .image-wrapper {
-  padding: 1em;
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
+  padding: 8px;
+  width: 20%;
+  box-sizing: border-box;
 }
 
 .images-list .image-wrapper img {
-  box-sizing: content-box;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.images-list .image-wrapper img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .images-list .image-wrapper img.selected {
-  border: 3px solid #6a3093 !important;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(106, 48, 147, 0.3);
-  transform: scale(0.98);
-  transition: all 0.2s ease;
+  border-color: #6a3093;
+  box-shadow: 0 0 0 2px rgba(106, 48, 147, 0.3);
+  transform: scale(1.02);
 }
 
-.images-list .grid .row:first-of-type {
-  max-height: 400px;
-  overflow-y: scroll;
-  padding-top: 0;
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .images-list .image-wrapper { width: 25%; }
 }
 
-.images-wrapper .ui.fluid.image-wrapper {
-  height: 420px;
+@media (max-width: 900px) {
+  .images-list .image-wrapper { width: 33.333%; }
+}
+
+@media (max-width: 600px) {
+  .images-list .image-wrapper { width: 50%; }
 }
 
 /* Стили для модальных окон */
